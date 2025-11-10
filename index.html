@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Myo Myat Paing — Network Engineer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/feather-icons"></script>
+<style>
+:root {
+  --bg: #0a192f;
+  --card: #112240;
+  --accent: #1e88e5;
+  --text: #e7eefc;
+  --muted: #9bb4d6;
+  --radius: 14px;
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+body.light {
+  --bg: #f6f9ff;
+  --card: #ffffff;
+  --accent: #1e88e5;
+  --text: #0a1a2f;
+  --muted: #5a6b85;
+  --border: rgba(0,0,0,0.1);
+  --shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+/* Base */
+*{box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family:"Inter",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  transition:background 0.4s,color 0.4s;
+}
+.container{max-width:1100px;margin:auto;padding:30px}
+h1,h2,h3{margin-top:0}
+a{color:var(--accent);text-decoration:none}
+ul{padding-left:20px}
+
+/* Header */
+header {
+  position:sticky;top:0;z-index:10;
+  background:rgba(10,25,47,0.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+  transition:background 0.4s;
+}
+body.light header{background:rgba(255,255,255,0.9)}
+header .inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 25px;flex-wrap:wrap;
+}
+.logo{font-weight:700;color:var(--accent);font-size:1.1rem}
+
+/* Nav menu */
+nav {
+  display:flex;align-items:center;
+}
+nav a {
+  margin:0 10px;color:var(--muted);font-weight:500;
+}
+nav a:hover{color:var(--accent)}
+.nav-links {
+  display:flex;flex-wrap:wrap;
+}
+#menu-toggle {
+  display:none;font-size:1.4rem;background:none;border:none;color:var(--text);cursor:pointer;
+}
+.theme-toggle {
+  background:transparent;border:1px solid var(--accent);color:var(--accent);
+  padding:6px 10px;border-radius:8px;margin-left:12px;cursor:pointer;
+  transition:all .3s;
+}
+.theme-toggle:hover{background:var(--accent);color:#fff}
+
+/* Main Sections */
+.section{padding:60px 0;border-bottom:1px solid var(--border)}
+.card{
+  background:var(--card);padding:20px;border-radius:var(--radius);
+  box-shadow:var(--shadow);margin-top:15px;
+}
+.hero{display:grid;grid-template-columns:1fr 320px;gap:25px;align-items:center}
+.hero h1{font-size:1.8rem;color:var(--accent)}
+.hero p{color:var(--muted)}
+.skill-grid,.certs,.project-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;
+}
+.project-card,.cert{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+input,textarea{
+  width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);
+  background:var(--card);color:var(--text);font-size:.95rem;
+}
+.btn{
+  background:var(--accent);color:#fff;padding:8px 14px;border:none;border-radius:8px;
+  cursor:pointer;font-weight:600;transition:opacity .3s;
+}
+.btn:hover{opacity:.9}
+.btn.outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:.9rem}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  #menu-toggle{display:block}
+  .nav-links{
+    display:none;flex-direction:column;width:100%;
+    background:var(--card);border-radius:var(--radius);
+    margin-top:10px;padding:10px;
+  }
+  .nav-links a{margin:10px 0;color:var(--text)}
+  .nav-links.show{display:flex;}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="inner">
+    <div class="logo">Myo Myat Paing</div>
+    <button id="menu-toggle">☰</button>
+    <nav>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle">🌙 Dark</button>
+  </div>
+</header>
+
+
+<main class="container">
+  <section id="about" class="hero section">
+    <div>
+      <h1>Network & Security Engineer</h1>
+      <p>Detail-oriented engineer with 5 years experience designing, implementing, and securing multivendor infrastructures. Skilled with Fortinet, Cisco, Huawei, Palo Alto, Check Point, Wireless, Zabbix, and Grafana. Available for onsite, remote and freelance engagements.</p>
+      <p><strong>📞</strong> +959 971803030  |  <strong>✉️</strong> <a href="mailto:myomyatpaing5555@gmail.com">myomyatpaing5555@gmail.com</a>  |  Yangon, Myanmar</p>
+      <div style="margin-top:15px"><a href="#contact" class="btn">Hire Me</a></div>
+	<div style="margin-top:25px"><a href="resume.pdf" download class="btn outline">Download CV</a></div>
+    </div>
+    <div class="card">
+      <h3>Summary</h3>
+      <p>Hands-on professional specializing in Network Design, Routing & Switching, Wireless, Security policy, VPNs, SD-WAN, Monitoring, CCTV and IT related environment. Strong troubleshooting mindset and commitment to uptime and performance.</p>
+      <p><strong>Languages:</strong> English   |   <strong>Notice Period:</strong> 1 month</p>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Work Experience</h2>
+    <div class="card"><h3>KBZ Bank — Associate Network Engineer (Assistant Supervisor)</h3><small>Aug 2024 – Present</small>
+      <ul class="list">
+        <li>Technical Support : Provide remote and onsite support including device health checks, IPAM, LAN/WAN 		link troubleshooting, Spanning Tree Protocol, VLAN, Inter-Vlan Routing, DNS, DHCP, tunnel recovery, 		and emergency response.</li>
+	<li>Develop clear and scalable network documentation including High-Level Design (HLD) and Low-Level Design 		(LLD).</li>
+        <li>Tech Refreshment Project : Designed 10-floor office network using Huawei Router, Switches, APs and 			tunneling to DC Hub.</li>
+        <li>FortiGate Firewall & Router, Switch: Configured FortiGate firewalls, FortiAPs, routers (				Cisco/Huawei).</li>
+	<li>Wireless Technology : Experience in configuring and managing wireless APs and controller dashboards - 		Cisco Meraki, FortiEdge Cloud, Huawei WLC, EdgeCore Cloud, and Ruijie.</li>
+	<li>Server Management : Experience in managing VM servers on VMware ESXi, IPAM efficient IP server and 			deploying and configuration Radius server for 802.1x ( dot1x ) authentication.</li>
+	<li>SD-WAN & Branch Deployment : Understanding of Cisco SD-WAN architecture and branch deployment 			strategies.</li>
+	<li>VPN Configuration : Experience in configuration and deploying Site to Site VPN such as IPsec, SSL and 		Remote Access VPN such as Forti Client and Global Protect.</li>
+	<li>NGFW Experience : Experience working with next-generation firewalls including Palo Alto and Check 			Point.</li>
+	<li>Network Security : Hand-on experience in security best practice and configuration such as L3 to L7 			Security Policy Rules, Security Profiles, Logging, SNAT, DNAT, Security Posture and HIP, ACL, VACL, 		Vulnerability and CVE handling, IPS/IDS signatures and security patch upgrade.</li>
+
+      </ul>
+    </div>
+    <div class="card"><h3>AGB Communication Co., Ltd — L2 NOC Engineer</h3><small>Feb 2023 – Aug 2024</small>
+      <ul class="list">
+        <li>Core Network Monitoring : Monitor and escalate issues related to all core network services and 			infrastructure, including data center environments.</li>
+        <li>ISP & Backbone Oversight : Monitor and escalate issues involving ISP backbone, upstream and downstream 		links, and regional DPLC connections.</li>
+	<li>NMS Alerts Handling : Respond to network alerts and alarms from NMS tools (Zabbix, Cacti), and take 		immediate action for resolution.</li>
+	<li>Customer Support : Provide technical assistance via phone, chat, and email to regional customers, 			including DIA, IPVPN, MPLS and Metro clients.</li>
+	<li>Cross-Team Collaboration : Work closely with other technical teams to troubleshoot and resolve complex 		network problems.</li>
+      </ul>
+    </div>
+    <div class="card"><h3>Myanmar Net (Frontiir) — Assistant Network Engineer</h3><small>Feb 2022 – Jan 2023</small>
+      <ul class="list">
+	<li>Fiber Network Design : Involved in redesigning and implementing fiber networks street by street in a 		ground engineer role.</li>
+	<li>POE & Wireless Configuration : Configure PoE switches and point-to-point (PTP) wireless devices for 		stable connectivity.</li>
+	<li>Remote Support : Provide remote technical assistance to ground engineers in the field, acting as a (MS 		Engineer).</li>
+	<li>Field Issue Resolution : Communicate with ground teams to identify and resolve real-time network issues 		efficiently.</li>
+</ul>
+    </div>
+    <div class="card"><h3>Sakura Hospital (Hinthada) — IT Staff</h3><small>Nov 2020 – Jan 2022</small>
+      <ul class="list">
+	<li>IT Hardware Maintenance : Maintain and troubleshoot computer hardware, printers, and scanners to ensure 		smooth daily operations.</li>
+	<li>Software & OS Management : Perform Windows installations, software upgrades, and routine system 			maintenance.</li>
+	<li>CCTV & Surveillance : Install CCTV systems and configure NVR/DVR devices from Hikvision and Dahua.</li>
+	<li>Network Troubleshooting : Diagnose and resolve network- related issues across departments and 			offices.</li>
+
+</ul>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2>Expertise & Skills</h2>
+    <div class="skill-grid">
+      <div class="card"><h4>Networking</h4><p>LAN, WAN, OSPF, BGP, MPLS, HSRP, STP, VLAN, EtherChannel</p></div>
+      <div class="card"><h4>Firewalls & Security</h4><p>Fortinet, Palo Alto, Check Point, Cisco ASA, ACL, IPS/IDS</p></div>
+      <div class="card"><h4>Monitoring</h4><p>Zabbix, Cacti, Grafana — Alert handling and analysis</p></div>
+      <div class="card"><h4>Wireless & PoE</h4><p>Cisco Meraki, FortiAP, Huawei AP & WLC, TP Link, Ruijie</p></div>
+      <div class="card"><h4>Server & Auth</h4><p>VMware ESXi, Window Server, Radius/NPS, IPAM</p></div>
+      <div class="card"><h4>Soft Skills</h4><p>Communication, Teamwork, Cretical Thinking, Problem Solving, 	Adaptability</p></div>
+	<div class="card"><h4>Network Design</h4><p>High Level Design, Low Level Design</p></div>
+	<div class="card"><h4>VPN Technology</h4><p>IPsec, SSL, Remote Access VPN (FortiClient, Global Protect)</p></div>
+    </div>
+  </section>
+
+<section id="certs">
+      <h2 class="section-title">Certifications</h2>
+      <div class="grid certs">
+        <div class="cert">
+          <b>CCNA</b>
+          <span class="muted">Cisco Certified Network Associate</span>
+        </div>
+        <div class="cert">
+          <b>CCNP ENCOR</b>
+          <span class="muted">Enterprise Core</span>
+        </div>
+        <div class="cert">
+          <b>FCA | NSE 3</b>
+          <span class="muted">Foritnet Certified Associate in Cybersecurity</span>
+        </div>
+        <div class="cert">
+          <b>NGFE</b>
+          <span class="muted">Palo Alto Networks</span>
+        </div>
+	<div class="cert">
+          <b>Aviatrix</b>
+          <span class="muted">Aviatrix Certified MultiCloud Network Associate</span>
+        </div>
+	<div class="cert">
+          <b>CCSA</b>
+          <span class="muted">CheckPoint Certified Security Administrator</span>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  <section id="projects" class="section">
+    <h2>Project Samples</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>🏢 Onsite Project — Corporate LAN/WAN Setup</h3>
+        <p>Successfully completed network setup with Router, Switches, APs for 10-floor office building in record 4
+days Pilot Test, Devices Mounting and WAN/LAN failover configuration .</p>
+      </div>
+      <div class="project-card">
+        <h3>🏢 Onsite Project — FortiGate Firewall Deployment</h3>
+        <p>Successfully deployed and configured FortiGate firewalls such route, nat, policy and IPsec tunnelling to 		DC Hub and FortiAPs across multiple sites, enhancing network security and performance.</p>
+      </div>
+      <div class="project-card">
+        <h3>💻 Freelance Project — Window Server and Radius dot1x Authentication</h3>
+        <p>Success in Window Server 2016 and Radius/NPS Server Deployment for 802.1x (dot1x) authentication with 		Wireless Network.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="contact-grid">
+      <form id="contact-form" class="card">
+        <label>Name <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Message <textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="card">
+        <p><strong>Phone:</strong> +959 971803030 (WhatsApp)</p>
+        <p><strong>Email:</strong> <a href="mailto:myomyatpaing5555@gmail.com">myomyatpaing5555@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/myomyatpaing" target="_blank">linkedin.com/in/myomyatpaing</a></p>
+        <p><strong>Location:</strong> Yangon, Myanmar</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Myo Myat Paing — Network & Security Engineer | Available for Onsite • Remote • Freelance Work</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  if(window.feather) feather.replace();
+  document.getElementById("year").textContent=new Date().getFullYear();
+
+  // Mobile menu toggle
+  const menuBtn=document.getElementById("menu-toggle");
+  const navLinks=document.getElementById("nav-links");
+  menuBtn.addEventListener("click",()=>{navLinks.classList.toggle("show");});
+
+  // Theme toggle
+  const body=document.body;
+  const toggle=document.getElementById("theme-toggle");
+  if(localStorage.getItem("theme")==="light"){body.classList.add("light");toggle.textContent="🌙 Dark";}
+  toggle.addEventListener("click",()=>{
+    body.classList.toggle("light");
+    const isLight=body.classList.contains("light");
+    toggle.textContent=isLight?"🌙 Dark":"☀️ Light";
+    localStorage.setItem("theme",isLight?"light":"dark");
+  });
+
+  // Demo contact form
+  const form=document.getElementById("contact-form");
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const d=new FormData(form);
+    alert(`Thanks ${d.get("name")}! This demo form does not send yet.`);
+    form.reset();
+  });
+});
+</script>
+</body>
+</html>
